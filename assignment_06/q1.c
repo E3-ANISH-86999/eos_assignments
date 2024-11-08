@@ -17,10 +17,10 @@ int main(){
 		}	
 	}
 
+
 	while(waitpid(-1, &s, 0) > 0){
 		printf("Child exit status: %d\n", WEXITSTATUS(s));
 	}
-	
 	return 0;
 }
 

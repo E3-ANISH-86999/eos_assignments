@@ -1,4 +1,4 @@
-TARGET=q3
+TARGET=q1
 CC=gcc
 
 $(TARGET).out: $(TARGET).o

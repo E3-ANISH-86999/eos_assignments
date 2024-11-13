@@ -4,8 +4,12 @@
 
 int main(){
     int arr[2];
-    int pid1, pid2, err1, err2, s1, s2;
-    pipe(arr);
+    int pid1, pid2, err1, err2, s1, s2, ret;
+    ret = pipe(arr);
+    if(ret < 0){
+		perror("pipe() failed!");
+		_exit(1);
+	}
 
     pid1 = fork();
     if(pid1 == 0) { // writer process
